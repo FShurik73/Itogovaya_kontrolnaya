@@ -8,3 +8,56 @@
 
 Для сдачи проекта необходимо создать отдельный общедоступный репозиторий(Github, gitlub, или Bitbucket). Разработку вести в этом репозитории, использовать пул реквесты на изменения. Программа должна запускаться и работать, ошибок при выполнении программы быть не должно. Программа, может использоваться в различных системах, поэтому необходимо разработать класс в виде конструктора.
 
+## Задание ##
+
+1. Используя команду cat в терминале операционной системы Linux, создать
+два файла: Домашние животные (заполнив файл собаками, кошками, хомяками) и Вьючные животные (заполнив файл лошадьми, верблюдами и ослами), а затем объединить их. Просмотреть содержимое созданного файла.
+Переименовать файл, дав ему новое имя (Друзья человека).
+
+```sh
+mkdir itog_control
+cd itog_control/
+cat > 'home_animals'
+dogs
+cats
+hamsters
+```
+```sh
+cat > 'pack_animals'
+camels
+horses
+donkeys
+```
+```sh
+cat home_animals pack_animals > 'animals'
+cat animals
+dogs
+cats
+hamsters
+camels
+horses
+donkeys
+```
+```sh
+mv animals 'human_friends'
+```
+2. Создать директорию, переместить файл туда.
+```sh
+mkdir animalDir
+mv human_friends animalDir/
+```
+
+3. Подключить дополнительный репозиторий MySQL. Установить любой пакет из этого репозитория.
+```sh
+apt update
+apt install mysql-server
+```
+4. Установить и удалить deb-пакет с помощью dpkg.
+```sh
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.25-1_all.deb
+dpkg -i mysql-apt-config_0.8.25-1_all.deb
+dpkg -r mysql-apt-config
+```
+5. Выложить историю команд в терминале ubuntu
+![Alt text](images/Task5-1.png)
+![Alt text](images/Task5-2.png)
